@@ -6,6 +6,7 @@
 
 ## Technologies
 
+- [font awesome](https://fontawesome.com/icons/search?style=solid)
 - React
 - [react-modal](https://github.com/reactjs/react-modal)
 
