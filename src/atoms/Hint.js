@@ -13,14 +13,17 @@ const Button = styled.button`
   }
 `;
 
-export default function Hint({ hint }) {
+export default function Hint({ hint, handleSearch }) {
   return (
     <li>
-      <Button type="button">{hint}</Button>
+      <Button type="button" onClick={() => handleSearch(hint)}>
+        {hint}
+      </Button>
     </li>
   );
 }
 
 Hint.propTypes = {
   hint: PropTypes.string,
+  handleSearch: PropTypes.func,
 };

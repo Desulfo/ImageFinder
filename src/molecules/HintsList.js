@@ -13,11 +13,11 @@ const Ul = styled.ul`
   border-radius: 5px;
 `;
 
-export default function HintsList({ hints }) {
+export default function HintsList({ hints, handleSearch }) {
   return (
     <Ul>
       {hints.map((hint) => (
-        <Hint hint={hint} />
+        <Hint hint={hint} key={hint} handleSearch={handleSearch} />
       ))}
     </Ul>
   );
@@ -25,4 +25,5 @@ export default function HintsList({ hints }) {
 
 HintsList.propTypes = {
   hints: PropTypes.arrayOf(PropTypes.string),
+  handleSearch: PropTypes.func,
 };

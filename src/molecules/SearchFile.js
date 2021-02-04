@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import SearchIcon from '../atoms/searchComponents/SearchIcon';
@@ -17,12 +18,16 @@ const Search = styled.main`
   padding: 5px;
 `;
 
-export default function SearchFile() {
+export default function SearchFile({ handleSearch }) {
   return (
     <Search>
       <SearchIcon />
-      <Input />
+      <Input handleSearch={handleSearch} />
       <ClearButton />
     </Search>
   );
 }
+
+SearchFile.propTypes = {
+  handleSearch: PropTypes.func,
+};
