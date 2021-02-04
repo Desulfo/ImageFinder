@@ -1,5 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const H1 = styled.h1``;
 
 export default function Header() {
-  return <h1> Find your image</h1>;
+  return <H1> Find your image</H1>;
 }
