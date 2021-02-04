@@ -8,6 +8,7 @@
 
 - [font awesome](https://fontawesome.com/icons/search?style=solid)
 - React
+- [styled-components](https://styled-components.com/)
 - [react-modal](https://github.com/reactjs/react-modal)
 
 ## Setup
