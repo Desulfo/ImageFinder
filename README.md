@@ -6,8 +6,9 @@
 
 ## Technologies
 
+- [React](https://reactjs.org/)
+- [Unsplash API](https://unsplash.com/developers)
 - [font awesome](https://fontawesome.com/icons/search?style=solid)
-- React
 - [styled-components](https://styled-components.com/)
 - [react-modal](https://github.com/reactjs/react-modal)
 
