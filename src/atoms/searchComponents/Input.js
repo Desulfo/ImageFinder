@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -10,22 +10,30 @@ const StyledInput = styled.input`
     outline: none;
   }
 `;
-export default function Input({ handleSearch }) {
+export default function Input({ search, handleSearch }) {
+  const [value, setValue] = useState(search);
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
   const handleClick = (e) => {
     if (e.key === 'Enter') {
       handleSearch(e.target.value);
     }
   };
-  // eslint-disable-next-line prettier/prettier
   return (
     <StyledInput
       type="text"
+      // eslint-disable-next-line prettier/prettier
       placeholder="Search free hight-resolution photos"
       onKeyUp={(e) => handleClick(e)}
+      value={value}
+      onChange={(e) => handleChange(e)}
     />
   );
 }
 
 Input.propTypes = {
+  search: PropTypes.string,
   handleSearch: PropTypes.func,
 };

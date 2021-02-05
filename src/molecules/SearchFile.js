@@ -18,16 +18,17 @@ const Search = styled.main`
   padding: 5px;
 `;
 
-export default function SearchFile({ handleSearch }) {
+export default function SearchFile({ search, handleSearch }) {
   return (
     <Search>
       <SearchIcon />
-      <Input handleSearch={handleSearch} />
+      <Input search={search} handleSearch={handleSearch} />
       <ClearButton />
     </Search>
   );
 }
 
 SearchFile.propTypes = {
+  search: PropTypes.string,
   handleSearch: PropTypes.func,
 };

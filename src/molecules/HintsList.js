@@ -8,7 +8,6 @@ const Ul = styled.ul`
   margin: 5px auto;
   width: 80vw;
   max-width: 500px;
-  list-style: none;
   border: 1px solid #8a8a8a;
   border-radius: 5px;
 `;
