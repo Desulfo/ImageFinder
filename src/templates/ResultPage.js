@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Header from '../atoms/Header';
 import SearchFile from '../molecules/SearchFile';
+import ImageList from '../molecules/ImageList';
 
 const ResultPageStyled = styled.main`
   margin: 0 auto;
@@ -17,40 +18,16 @@ const ResultPageStyled = styled.main`
     max-width: 1270px;
   }
 `;
-const ImageList = styled.ul`
-  @media (min-width: 850px) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-`;
-
-const Image = styled.img`
-  margin: 5px;
-  max-width: 100%;
-  @media (min-width: 850px) {
-  }
-`;
 
 export default function ResultPage({ search, results, handleSearch }) {
-  console.log(results !== []);
   return (
     <ResultPageStyled>
       <SearchFile search={search} handleSearch={handleSearch} />
       <Header>{search}</Header>
       <ul>
-        <li>'coś'</li>
+        <li>tags</li>
       </ul>
-      <ImageList>
-        {results !== [] &&
-          results.map((element) => (
-            <li>
-              <a>
-                <Image src={element.urls.small} alt={element.alt_description} />
-              </a>
-            </li>
-          ))}
-      </ImageList>
+      {results && <ImageList results={results} />}
     </ResultPageStyled>
   );
 }
