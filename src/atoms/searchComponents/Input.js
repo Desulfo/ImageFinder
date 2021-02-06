@@ -24,7 +24,6 @@ export default function Input({ search, handleSearch }) {
   return (
     <StyledInput
       type="text"
-      // eslint-disable-next-line prettier/prettier
       placeholder="Search free hight-resolution photos"
       onKeyUp={(e) => handleClick(e)}
       value={value}

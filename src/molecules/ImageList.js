@@ -8,14 +8,13 @@ const ImageListStyled = styled.ul`
   @media (min-width: 850px) {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
   }
 `;
 
 export default function ImageList({ results }) {
   return (
     <ImageListStyled>
-      {results !== [] && results.map((result) => <ListItem element={result} />)}
+      {results !== [] && results.map((result) => <ListItem element={result} key={result.id} />)}
     </ImageListStyled>
   );
 }
