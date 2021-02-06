@@ -1,6 +1,6 @@
 # ImageFinder
 
-<!-- Live version: [Hype](https://desulfo.github.io/Hype/) -->
+Live version: [ImageFinder](https://desulfo.github.io/imageFinder/)
 
 ## General information
 
