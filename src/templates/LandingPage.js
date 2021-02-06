@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import SearchFile from '../molecules/SearchFile';
 import Header from '../atoms/Header';
 import HintsList from '../molecules/HintsList';
 
-export default function LandingPage() {
+export default function LandingPage({ handleSearch }) {
   const [display, setDisplay] = useState(false);
   const [options, setOptions] = useState([]);
   const [search, setSearch] = useState('');
   const hints = ['las'];
 
-  const handleSearch = (value) => {
-    setSearch(value);
-  };
   return (
     <main>
       <Header>Unsplash</Header>
@@ -21,3 +19,7 @@ export default function LandingPage() {
     </main>
   );
 }
+
+LandingPage.propTypes = {
+  handleSearch: PropTypes.func,
+};

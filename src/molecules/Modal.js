@@ -46,9 +46,6 @@ export default function StyledModal({ closeModal, modalIsOpen, element }) {
       <Header>{element.user.name}</Header>
       <Image src={element.urls.full} alt={element.alt_description} />
       <p>{location || 'no location'}</p>
-      <button type="button" onClick={closeModal}>
-        X
-      </button>
     </Modal>
   );
 }

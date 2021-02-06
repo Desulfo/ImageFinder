@@ -10,7 +10,7 @@ const StyledInput = styled.input`
     outline: none;
   }
 `;
-export default function Input({ search, handleSearch }) {
+export default function Input({ search = '', handleSearch }) {
   const [value, setValue] = useState(search);
   const handleChange = (e) => {
     setValue(e.target.value);
