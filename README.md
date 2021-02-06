@@ -1,6 +1,6 @@
 # ImageFinder
 
-Live version: [ImageFinder](https://desulfo.github.io/imageFinder/)
+Live version: [ImageFinder](https://desulfo.github.io/ImageFinder/)
 
 ## General information
 
