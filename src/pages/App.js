@@ -10,7 +10,6 @@ export default function App() {
   const [results, setResults] = useState([]);
 
   const handleSearch = (value) => {
-    console.log('działam');
     setSearch(value);
   };
   useEffect(() => {

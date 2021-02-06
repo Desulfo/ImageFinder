@@ -24,9 +24,6 @@ export default function ResultPage({ search, results, handleSearch }) {
     <ResultPageStyled>
       <SearchFile search={search} handleSearch={handleSearch} />
       <Header>{search}</Header>
-      <ul>
-        <li>tags</li>
-      </ul>
       {results && <ImageList results={results} />}
     </ResultPageStyled>
   );
