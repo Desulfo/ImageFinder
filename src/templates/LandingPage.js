@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 
 import SearchFile from '../molecules/SearchFile';
@@ -18,9 +17,7 @@ export default function LandingPage() {
     <main>
       <Header>Unsplash</Header>
       <SearchFile handleSearch={handleSearch} />
-      {hints.length > 0 && (
-        <HintsList hints={hints} handleSearch={handleSearch} />
-      )}
+      {hints.length > 0 && <HintsList hints={hints} handleSearch={handleSearch} />}
     </main>
   );
 }
